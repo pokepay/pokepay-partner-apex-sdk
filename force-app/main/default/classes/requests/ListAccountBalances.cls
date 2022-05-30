@@ -50,6 +50,6 @@ public with sharing class ListAccountBalances extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return '{}';
+        return JSON.serialize(this);
     }
 }

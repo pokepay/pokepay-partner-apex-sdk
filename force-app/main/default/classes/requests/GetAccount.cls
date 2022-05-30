@@ -20,6 +20,6 @@ public with sharing class GetAccount extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return '{}';
+        return JSON.serialize(this);
     }
 }

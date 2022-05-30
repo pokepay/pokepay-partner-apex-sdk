@@ -38,6 +38,6 @@ public with sharing class ListCampaigns extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return '{}';
+        return JSON.serialize(this);
     }
 }

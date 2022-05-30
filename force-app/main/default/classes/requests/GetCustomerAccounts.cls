@@ -74,6 +74,6 @@ public with sharing class GetCustomerAccounts extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return '{}';
+        return JSON.serialize(this);
     }
 }

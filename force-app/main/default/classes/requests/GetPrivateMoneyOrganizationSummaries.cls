@@ -44,6 +44,6 @@ public with sharing class GetPrivateMoneyOrganizationSummaries extends PokepayRe
     }
 
     public override String getRequestBody() {
-        return '{}';
+        return JSON.serialize(this);
     }
 }

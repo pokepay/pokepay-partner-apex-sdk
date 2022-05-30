@@ -20,6 +20,6 @@ public with sharing class GetCpmToken extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return '{}';
+        return JSON.serialize(this);
     }
 }

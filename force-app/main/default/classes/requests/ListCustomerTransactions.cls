@@ -68,6 +68,6 @@ public with sharing class ListCustomerTransactions extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return '{}';
+        return JSON.serialize(this);
     }
 }

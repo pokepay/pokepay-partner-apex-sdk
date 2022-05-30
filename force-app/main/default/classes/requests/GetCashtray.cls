@@ -20,6 +20,6 @@ public with sharing class GetCashtray extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return '{}';
+        return JSON.serialize(this);
     }
 }

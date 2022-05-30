@@ -11,7 +11,7 @@ public with sharing class ListTransactionsV2 extends PokepayRequest {
     private String transactionId;
     private Boolean isModified;
     private String[] types;
-    private String from;
+    private String startFrom;
     private String to;
     private String nextPageCursorId;
     private String prevPageCursorId;
@@ -66,8 +66,8 @@ public with sharing class ListTransactionsV2 extends PokepayRequest {
         return this;
     }
 
-    public ListTransactionsV2 from(String from) {
-        this.from = from;
+    public ListTransactionsV2 from(String startFrom) {
+        this.startFrom = startFrom;
         return this;
     }
 

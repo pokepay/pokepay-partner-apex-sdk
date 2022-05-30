@@ -9,7 +9,7 @@ public with sharing class CashtrayWithResult extends PokepayResponseBody {
     private String canceledAt;
     private String token;
     private CashtrayAttempt attempt;
-    private Transaction transaction;
+    private Transaction pokepayTransaction;
 
     public String getId() {
         return id;
@@ -44,7 +44,7 @@ public with sharing class CashtrayWithResult extends PokepayResponseBody {
     }
 
     public Transaction getTransaction() {
-        return transaction;
+        return pokepayTransaction;
     }
 }
 

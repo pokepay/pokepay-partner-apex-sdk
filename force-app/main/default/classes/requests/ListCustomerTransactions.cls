@@ -6,7 +6,7 @@ public with sharing class ListCustomerTransactions extends PokepayRequest {
     private String receiverCustomerId;
     private String type;
     private Boolean isModified;
-    private String from;
+    private String startFrom;
     private String to;
     private Integer page;
     private Integer perPage;
@@ -35,8 +35,8 @@ public with sharing class ListCustomerTransactions extends PokepayRequest {
         return this;
     }
 
-    public ListCustomerTransactions from(String from) {
-        this.from = from;
+    public ListCustomerTransactions from(String startFrom) {
+        this.startFrom = startFrom;
         return this;
     }
 

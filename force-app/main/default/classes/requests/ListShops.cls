@@ -78,6 +78,6 @@ public with sharing class ListShops extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return '{}';
     }
 }

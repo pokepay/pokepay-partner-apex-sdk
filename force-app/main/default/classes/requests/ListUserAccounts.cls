@@ -32,6 +32,6 @@ public with sharing class ListUserAccounts extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return '{}';
     }
 }

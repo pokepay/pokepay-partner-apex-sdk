@@ -96,6 +96,6 @@ public with sharing class ListBills extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return '{}';
     }
 }

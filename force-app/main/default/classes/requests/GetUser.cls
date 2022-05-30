@@ -18,6 +18,6 @@ public with sharing class GetUser extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return '{}';
     }
 }

@@ -50,6 +50,6 @@ public with sharing class GetShopAccounts extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return '{}';
     }
 }

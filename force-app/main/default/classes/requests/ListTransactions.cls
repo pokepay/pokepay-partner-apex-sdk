@@ -102,6 +102,6 @@ public with sharing class ListTransactions extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return '{}';
     }
 }

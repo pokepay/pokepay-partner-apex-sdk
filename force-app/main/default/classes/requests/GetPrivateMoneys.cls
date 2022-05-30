@@ -36,6 +36,6 @@ public with sharing class GetPrivateMoneys extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return '{}';
     }
 }

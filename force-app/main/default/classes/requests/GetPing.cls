@@ -18,6 +18,6 @@ public with sharing class GetPing extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return '{}';
     }
 }

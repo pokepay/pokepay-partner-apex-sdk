@@ -20,6 +20,6 @@ public with sharing class GetBulkTransaction extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return '{}';
     }
 }

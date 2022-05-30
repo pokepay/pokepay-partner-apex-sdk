@@ -40,7 +40,7 @@ public with sharing class GetPrivateMoneyOrganizationSummaries extends PokepayRe
     }
 
     public override Type getResponseClass() {
-        return PaginatedPrivateMoneyOrganizationSummaries.class;
+        return PaginatedMoneyOrgSummaries.class;
     }
 
     public override String getRequestBody() {

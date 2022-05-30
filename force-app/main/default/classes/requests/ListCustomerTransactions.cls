@@ -35,7 +35,7 @@ public with sharing class ListCustomerTransactions extends PokepayRequest {
         return this;
     }
 
-    public ListCustomerTransactions from(String startFrom) {
+    public ListCustomerTransactions startFrom(String startFrom) {
         this.startFrom = startFrom;
         return this;
     }

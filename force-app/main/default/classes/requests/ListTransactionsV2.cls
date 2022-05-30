@@ -66,7 +66,7 @@ public with sharing class ListTransactionsV2 extends PokepayRequest {
         return this;
     }
 
-    public ListTransactionsV2 from(String startFrom) {
+    public ListTransactionsV2 startFrom(String startFrom) {
         this.startFrom = startFrom;
         return this;
     }

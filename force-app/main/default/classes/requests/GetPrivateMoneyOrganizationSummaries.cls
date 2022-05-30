@@ -11,7 +11,7 @@ public with sharing class GetPrivateMoneyOrganizationSummaries extends PokepayRe
         this.privateMoneyId = privateMoneyId;
     }
 
-    public GetPrivateMoneyOrganizationSummaries from(String startFrom) {
+    public GetPrivateMoneyOrganizationSummaries startFrom(String startFrom) {
         this.startFrom = startFrom;
         return this;
     }

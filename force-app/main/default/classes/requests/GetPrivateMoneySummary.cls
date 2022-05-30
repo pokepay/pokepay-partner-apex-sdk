@@ -9,7 +9,7 @@ public with sharing class GetPrivateMoneySummary extends PokepayRequest {
         this.privateMoneyId = privateMoneyId;
     }
 
-    public GetPrivateMoneySummary from(String startFrom) {
+    public GetPrivateMoneySummary startFrom(String startFrom) {
         this.startFrom = startFrom;
         return this;
     }

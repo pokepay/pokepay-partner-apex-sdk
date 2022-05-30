@@ -3,7 +3,7 @@
 public with sharing class CpmToken extends PokepayResponseBody {
     private String cpmToken;
     private AccountDetail account;
-    private Transaction pokepayTransaction;
+    private PokepayTransaction pokepayTransaction;
     private ExternalTransaction event;
     private String[] scopes;
     private String expiresAt;
@@ -17,7 +17,7 @@ public with sharing class CpmToken extends PokepayResponseBody {
         return account;
     }
 
-    public Transaction getTransaction() {
+    public PokepayTransaction getTransaction() {
         return pokepayTransaction;
     }
 

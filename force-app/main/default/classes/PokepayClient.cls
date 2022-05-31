@@ -108,6 +108,7 @@ public with sharing class PokepayClient {
         this.req.setMethod(reqObj.method());
         this.req.setEndpoint(this.baseUrl + reqObj.path());
         System.debug('url: ' + this.req.getEndpoint());
+        System.debug('reqObj.getRequestBody()' + reqObj.getRequestBody());
         this.req.setBody(params);
         HTTPResponse res = this.client.send(req);
         String responseBody = res.getBody();
@@ -122,6 +123,9 @@ public with sharing class PokepayClient {
             }
         }
         
+        // System.debug('reqObj.getResponseClass():' + reqObj.getResponseClass());
+        // System.debug('responseBody:' + responseBody);
+
         return new PokepayResponse(
             res.getStatusCode(),
             JSON.deserializeStrict(responseBody, reqObj.getResponseClass())

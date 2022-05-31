@@ -3,11 +3,11 @@
 public with sharing class UpdateCashtray extends PokepayRequest {
     private Double amount;
     private String description;
-    private Integer expiresIn;
-    private String cashtrayId;
+    private Integer expires_in;
+    private String cashtray_id;
 
     public UpdateCashtray(String cashtrayId) {
-        this.cashtrayId = cashtrayId;
+        this.cashtray_id = cashtrayId;
     }
 
     public UpdateCashtray amount(Double amount) {
@@ -21,7 +21,7 @@ public with sharing class UpdateCashtray extends PokepayRequest {
     }
 
     public UpdateCashtray expiresIn(Integer expiresIn) {
-        this.expiresIn = expiresIn;
+        this.expires_in = expiresIn;
         return this;
     }
 
@@ -30,7 +30,7 @@ public with sharing class UpdateCashtray extends PokepayRequest {
     }
 
     public override String path() {
-        return '/cashtrays' + '/' + this.cashtrayId;
+        return '/cashtrays' + '/' + this.cashtray_id;
     }
 
     public override Type getResponseClass() {
@@ -38,6 +38,6 @@ public with sharing class UpdateCashtray extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

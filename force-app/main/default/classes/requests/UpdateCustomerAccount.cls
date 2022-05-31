@@ -2,12 +2,12 @@
 
 public with sharing class UpdateCustomerAccount extends PokepayRequest {
     private String status;
-    private String accountName;
-    private String externalId;
-    private String accountId;
+    private String account_name;
+    private String external_id;
+    private String account_id;
 
     public UpdateCustomerAccount(String accountId) {
-        this.accountId = accountId;
+        this.account_id = accountId;
     }
 
     public UpdateCustomerAccount status(String status) {
@@ -16,12 +16,12 @@ public with sharing class UpdateCustomerAccount extends PokepayRequest {
     }
 
     public UpdateCustomerAccount accountName(String accountName) {
-        this.accountName = accountName;
+        this.account_name = accountName;
         return this;
     }
 
     public UpdateCustomerAccount externalId(String externalId) {
-        this.externalId = externalId;
+        this.external_id = externalId;
         return this;
     }
 
@@ -30,7 +30,7 @@ public with sharing class UpdateCustomerAccount extends PokepayRequest {
     }
 
     public override String path() {
-        return '/accounts' + '/' + this.accountId + '/customers';
+        return '/accounts' + '/' + this.account_id + '/customers';
     }
 
     public override Type getResponseClass() {
@@ -38,6 +38,6 @@ public with sharing class UpdateCustomerAccount extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

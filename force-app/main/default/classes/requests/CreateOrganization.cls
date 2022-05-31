@@ -3,63 +3,63 @@
 public with sharing class CreateOrganization extends PokepayRequest {
     private String code;
     private String name;
-    private String[] privateMoneyIds;
-    private String issuerAdminUserEmail;
-    private String memberAdminUserEmail;
-    private String bankName;
-    private String bankCode;
-    private String bankBranchName;
-    private String bankBranchCode;
-    private String bankAccountType;
-    private String bankAccount;
-    private String bankAccountHolderName;
-    private String contactName;
+    private String[] private_money_ids;
+    private String issuer_admin_user_email;
+    private String member_admin_user_email;
+    private String bank_name;
+    private String bank_code;
+    private String bank_branch_name;
+    private String bank_branch_code;
+    private String bank_account_type;
+    private String bank_account;
+    private String bank_account_holder_name;
+    private String contact_name;
 
     public CreateOrganization(String code, String name, String[] privateMoneyIds, String issuerAdminUserEmail, String memberAdminUserEmail) {
         this.code = code;
         this.name = name;
-        this.privateMoneyIds = privateMoneyIds;
-        this.issuerAdminUserEmail = issuerAdminUserEmail;
-        this.memberAdminUserEmail = memberAdminUserEmail;
+        this.private_money_ids = privateMoneyIds;
+        this.issuer_admin_user_email = issuerAdminUserEmail;
+        this.member_admin_user_email = memberAdminUserEmail;
     }
 
     public CreateOrganization bankName(String bankName) {
-        this.bankName = bankName;
+        this.bank_name = bankName;
         return this;
     }
 
     public CreateOrganization bankCode(String bankCode) {
-        this.bankCode = bankCode;
+        this.bank_code = bankCode;
         return this;
     }
 
     public CreateOrganization bankBranchName(String bankBranchName) {
-        this.bankBranchName = bankBranchName;
+        this.bank_branch_name = bankBranchName;
         return this;
     }
 
     public CreateOrganization bankBranchCode(String bankBranchCode) {
-        this.bankBranchCode = bankBranchCode;
+        this.bank_branch_code = bankBranchCode;
         return this;
     }
 
     public CreateOrganization bankAccountType(String bankAccountType) {
-        this.bankAccountType = bankAccountType;
+        this.bank_account_type = bankAccountType;
         return this;
     }
 
     public CreateOrganization bankAccount(String bankAccount) {
-        this.bankAccount = bankAccount;
+        this.bank_account = bankAccount;
         return this;
     }
 
     public CreateOrganization bankAccountHolderName(String bankAccountHolderName) {
-        this.bankAccountHolderName = bankAccountHolderName;
+        this.bank_account_holder_name = bankAccountHolderName;
         return this;
     }
 
     public CreateOrganization contactName(String contactName) {
-        this.contactName = contactName;
+        this.contact_name = contactName;
         return this;
     }
 
@@ -76,6 +76,6 @@ public with sharing class CreateOrganization extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

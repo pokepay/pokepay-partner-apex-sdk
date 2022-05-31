@@ -2,26 +2,26 @@
 
 public with sharing class UpdateCampaign extends PokepayRequest {
     private String name;
-    private String startsAt;
-    private String endsAt;
+    private String starts_at;
+    private String ends_at;
     private Integer priority;
     private String event;
     private String description;
     private String status;
-    private String pointExpiresAt;
-    private Integer pointExpiresInDays;
-    private Boolean isExclusive;
+    private String point_expires_at;
+    private Integer point_expires_in_days;
+    private Boolean is_exclusive;
     private String subject;
-    private Object[] amountBasedPointRules;
-    private Object[] productBasedPointRules;
-    private Integer[] applicableDaysOfWeek;
-    private Object[] applicableTimeRanges;
-    private String[] applicableShopIds;
-    private Integer minimumNumberForCombinationPurchase;
-    private String campaignId;
+    private Object[] amount_based_point_rules;
+    private Object[] product_based_point_rules;
+    private Integer[] applicable_days_of_week;
+    private Object[] applicable_time_ranges;
+    private String[] applicable_shop_ids;
+    private Integer minimum_number_for_combination_purchase;
+    private String campaign_id;
 
     public UpdateCampaign(String campaignId) {
-        this.campaignId = campaignId;
+        this.campaign_id = campaignId;
     }
 
     public UpdateCampaign name(String name) {
@@ -30,12 +30,12 @@ public with sharing class UpdateCampaign extends PokepayRequest {
     }
 
     public UpdateCampaign startsAt(String startsAt) {
-        this.startsAt = startsAt;
+        this.starts_at = startsAt;
         return this;
     }
 
     public UpdateCampaign endsAt(String endsAt) {
-        this.endsAt = endsAt;
+        this.ends_at = endsAt;
         return this;
     }
 
@@ -60,17 +60,17 @@ public with sharing class UpdateCampaign extends PokepayRequest {
     }
 
     public UpdateCampaign pointExpiresAt(String pointExpiresAt) {
-        this.pointExpiresAt = pointExpiresAt;
+        this.point_expires_at = pointExpiresAt;
         return this;
     }
 
     public UpdateCampaign pointExpiresInDays(Integer pointExpiresInDays) {
-        this.pointExpiresInDays = pointExpiresInDays;
+        this.point_expires_in_days = pointExpiresInDays;
         return this;
     }
 
     public UpdateCampaign setExclusive(Boolean exclusive) {
-        isExclusive = exclusive;
+        this.is_exclusive = exclusive;
         return this;
     }
 
@@ -80,32 +80,32 @@ public with sharing class UpdateCampaign extends PokepayRequest {
     }
 
     public UpdateCampaign amountBasedPointRules(Object[] amountBasedPointRules) {
-        this.amountBasedPointRules = amountBasedPointRules;
+        this.amount_based_point_rules = amountBasedPointRules;
         return this;
     }
 
     public UpdateCampaign productBasedPointRules(Object[] productBasedPointRules) {
-        this.productBasedPointRules = productBasedPointRules;
+        this.product_based_point_rules = productBasedPointRules;
         return this;
     }
 
     public UpdateCampaign applicableDaysOfWeek(Integer[] applicableDaysOfWeek) {
-        this.applicableDaysOfWeek = applicableDaysOfWeek;
+        this.applicable_days_of_week = applicableDaysOfWeek;
         return this;
     }
 
     public UpdateCampaign applicableTimeRanges(Object[] applicableTimeRanges) {
-        this.applicableTimeRanges = applicableTimeRanges;
+        this.applicable_time_ranges = applicableTimeRanges;
         return this;
     }
 
     public UpdateCampaign applicableShopIds(String[] applicableShopIds) {
-        this.applicableShopIds = applicableShopIds;
+        this.applicable_shop_ids = applicableShopIds;
         return this;
     }
 
     public UpdateCampaign minimumNumberForCombinationPurchase(Integer minimumNumberForCombinationPurchase) {
-        this.minimumNumberForCombinationPurchase = minimumNumberForCombinationPurchase;
+        this.minimum_number_for_combination_purchase = minimumNumberForCombinationPurchase;
         return this;
     }
 
@@ -114,7 +114,7 @@ public with sharing class UpdateCampaign extends PokepayRequest {
     }
 
     public override String path() {
-        return '/campaigns' + '/' + this.campaignId;
+        return '/campaigns' + '/' + this.campaign_id;
     }
 
     public override Type getResponseClass() {
@@ -122,6 +122,6 @@ public with sharing class UpdateCampaign extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

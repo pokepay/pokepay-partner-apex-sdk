@@ -5,36 +5,36 @@ public with sharing class Cashtray extends PokepayResponseBody {
     private Double amount;
     private String description;
     private AccountWithUser account;
-    private String expiresAt;
-    private String canceledAt;
+    private String expires_at;
+    private String canceled_at;
     private String token;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public Double getAmount() {
-        return amount;
+        return this.amount;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public AccountWithUser getAccount() {
-        return account;
+        return this.account;
     }
 
     public String getExpiresAt() {
-        return expiresAt;
+        return this.expires_at;
     }
 
     public String getCanceledAt() {
-        return canceledAt;
+        return this.canceled_at;
     }
 
     public String getToken() {
-        return token;
+        return this.token;
     }
 }
 

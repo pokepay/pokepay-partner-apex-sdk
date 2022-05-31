@@ -2,18 +2,18 @@
 
 public with sharing class ListBills extends PokepayRequest {
     private Integer page;
-    private Integer perPage;
-    private String billId;
-    private String privateMoneyId;
-    private String organizationCode;
+    private Integer per_page;
+    private String bill_id;
+    private String private_money_id;
+    private String organization_code;
     private String description;
-    private String createdFrom;
-    private String createdTo;
-    private String shopName;
-    private String shopId;
-    private Integer lowerLimitAmount;
-    private Integer upperLimitAmount;
-    private Boolean isDisabled;
+    private String created_from;
+    private String created_to;
+    private String shop_name;
+    private String shop_id;
+    private Integer lower_limit_amount;
+    private Integer upper_limit_amount;
+    private Boolean is_disabled;
 
     public ListBills() {
     }
@@ -24,22 +24,22 @@ public with sharing class ListBills extends PokepayRequest {
     }
 
     public ListBills perPage(Integer perPage) {
-        this.perPage = perPage;
+        this.per_page = perPage;
         return this;
     }
 
     public ListBills billId(String billId) {
-        this.billId = billId;
+        this.bill_id = billId;
         return this;
     }
 
     public ListBills privateMoneyId(String privateMoneyId) {
-        this.privateMoneyId = privateMoneyId;
+        this.private_money_id = privateMoneyId;
         return this;
     }
 
     public ListBills organizationCode(String organizationCode) {
-        this.organizationCode = organizationCode;
+        this.organization_code = organizationCode;
         return this;
     }
 
@@ -49,37 +49,37 @@ public with sharing class ListBills extends PokepayRequest {
     }
 
     public ListBills createdFrom(String createdFrom) {
-        this.createdFrom = createdFrom;
+        this.created_from = createdFrom;
         return this;
     }
 
     public ListBills createdTo(String createdTo) {
-        this.createdTo = createdTo;
+        this.created_to = createdTo;
         return this;
     }
 
     public ListBills shopName(String shopName) {
-        this.shopName = shopName;
+        this.shop_name = shopName;
         return this;
     }
 
     public ListBills shopId(String shopId) {
-        this.shopId = shopId;
+        this.shop_id = shopId;
         return this;
     }
 
     public ListBills lowerLimitAmount(Integer lowerLimitAmount) {
-        this.lowerLimitAmount = lowerLimitAmount;
+        this.lower_limit_amount = lowerLimitAmount;
         return this;
     }
 
     public ListBills upperLimitAmount(Integer upperLimitAmount) {
-        this.upperLimitAmount = upperLimitAmount;
+        this.upper_limit_amount = upperLimitAmount;
         return this;
     }
 
     public ListBills setDisabled(Boolean disabled) {
-        isDisabled = disabled;
+        this.is_disabled = disabled;
         return this;
     }
 
@@ -96,6 +96,6 @@ public with sharing class ListBills extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

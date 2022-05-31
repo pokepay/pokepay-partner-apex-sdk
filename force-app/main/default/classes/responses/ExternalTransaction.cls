@@ -2,49 +2,49 @@
 
 public with sharing class ExternalTransaction extends PokepayResponseBody {
     private String id;
-    private Boolean isModified;
+    private Boolean is_modified;
     private User sender;
-    private Account senderAccount;
+    private Account sender_account;
     private User receiver;
-    private Account receiverAccount;
+    private Account receiver_account;
     private Double amount;
-    private String doneAt;
+    private String done_at;
     private String description;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public Boolean isModified() {
-        return isModified;
+        return this.is_modified;
     }
 
     public User getSender() {
-        return sender;
+        return this.sender;
     }
 
     public Account getSenderAccount() {
-        return senderAccount;
+        return this.sender_account;
     }
 
     public User getReceiver() {
-        return receiver;
+        return this.receiver;
     }
 
     public Account getReceiverAccount() {
-        return receiverAccount;
+        return this.receiver_account;
     }
 
     public Double getAmount() {
-        return amount;
+        return this.amount;
     }
 
     public String getDoneAt() {
-        return doneAt;
+        return this.done_at;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 }
 

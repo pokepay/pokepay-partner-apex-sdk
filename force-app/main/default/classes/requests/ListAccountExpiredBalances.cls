@@ -2,14 +2,14 @@
 
 public with sharing class ListAccountExpiredBalances extends PokepayRequest {
     private Integer page;
-    private Integer perPage;
-    private String expiresAtFrom;
-    private String expiresAtTo;
+    private Integer per_page;
+    private String expires_at_from;
+    private String expires_at_to;
     private String direction;
-    private String accountId;
+    private String account_id;
 
     public ListAccountExpiredBalances(String accountId) {
-        this.accountId = accountId;
+        this.account_id = accountId;
     }
 
     public ListAccountExpiredBalances page(Integer page) {
@@ -18,17 +18,17 @@ public with sharing class ListAccountExpiredBalances extends PokepayRequest {
     }
 
     public ListAccountExpiredBalances perPage(Integer perPage) {
-        this.perPage = perPage;
+        this.per_page = perPage;
         return this;
     }
 
     public ListAccountExpiredBalances expiresAtFrom(String expiresAtFrom) {
-        this.expiresAtFrom = expiresAtFrom;
+        this.expires_at_from = expiresAtFrom;
         return this;
     }
 
     public ListAccountExpiredBalances expiresAtTo(String expiresAtTo) {
-        this.expiresAtTo = expiresAtTo;
+        this.expires_at_to = expiresAtTo;
         return this;
     }
 
@@ -42,7 +42,7 @@ public with sharing class ListAccountExpiredBalances extends PokepayRequest {
     }
 
     public override String path() {
-        return '/accounts' + '/' + this.accountId + '/expired-balances';
+        return '/accounts' + '/' + this.account_id + '/expired-balances';
     }
 
     public override Type getResponseClass() {
@@ -50,6 +50,6 @@ public with sharing class ListAccountExpiredBalances extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

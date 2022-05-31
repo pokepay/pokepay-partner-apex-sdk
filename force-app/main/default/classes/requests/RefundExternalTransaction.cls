@@ -2,10 +2,10 @@
 
 public with sharing class RefundExternalTransaction extends PokepayRequest {
     private String description;
-    private String eventId;
+    private String event_id;
 
     public RefundExternalTransaction(String eventId) {
-        this.eventId = eventId;
+        this.event_id = eventId;
     }
 
     public RefundExternalTransaction description(String description) {
@@ -18,7 +18,7 @@ public with sharing class RefundExternalTransaction extends PokepayRequest {
     }
 
     public override String path() {
-        return '/external-transactions' + '/' + this.eventId + '/refund';
+        return '/external-transactions' + '/' + this.event_id + '/refund';
     }
 
     public override Type getResponseClass() {
@@ -26,6 +26,6 @@ public with sharing class RefundExternalTransaction extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

@@ -4,12 +4,12 @@ public with sharing class BulkCreateTransaction extends PokepayRequest {
     private String name;
     private String description;
     private String content;
-    private String requestId;
+    private String request_id;
 
     public BulkCreateTransaction(String name, String content, String requestId) {
         this.name = name;
         this.content = content;
-        this.requestId = requestId;
+        this.request_id = requestId;
     }
 
     public BulkCreateTransaction description(String description) {
@@ -30,6 +30,6 @@ public with sharing class BulkCreateTransaction extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

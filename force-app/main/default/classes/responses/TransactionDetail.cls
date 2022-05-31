@@ -3,68 +3,68 @@
 public with sharing class TransactionDetail extends PokepayResponseBody {
     private String id;
     private String type;
-    private Boolean isModified;
+    private Boolean is_modified;
     private User sender;
-    private Account senderAccount;
+    private Account sender_account;
     private User receiver;
-    private Account receiverAccount;
+    private Account receiver_account;
     private Double amount;
-    private Double moneyAmount;
-    private Double pointAmount;
-    private String doneAt;
+    private Double money_amount;
+    private Double point_amount;
+    private String done_at;
     private String description;
     private Transfer[] transfers;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public Boolean isModified() {
-        return isModified;
+        return this.is_modified;
     }
 
     public User getSender() {
-        return sender;
+        return this.sender;
     }
 
     public Account getSenderAccount() {
-        return senderAccount;
+        return this.sender_account;
     }
 
     public User getReceiver() {
-        return receiver;
+        return this.receiver;
     }
 
     public Account getReceiverAccount() {
-        return receiverAccount;
+        return this.receiver_account;
     }
 
     public Double getAmount() {
-        return amount;
+        return this.amount;
     }
 
     public Double getMoneyAmount() {
-        return moneyAmount;
+        return this.money_amount;
     }
 
     public Double getPointAmount() {
-        return pointAmount;
+        return this.point_amount;
     }
 
     public String getDoneAt() {
-        return doneAt;
+        return this.done_at;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public Transfer[] getTransfers() {
-        return transfers;
+        return this.transfers;
     }
 }
 

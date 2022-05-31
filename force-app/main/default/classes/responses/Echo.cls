@@ -5,11 +5,11 @@ public with sharing class Echo extends PokepayResponseBody {
     private String message;
 
     public String getStatus() {
-        return status;
+        return this.status;
     }
 
     public String getMessage() {
-        return message;
+        return this.message;
     }
 }
 

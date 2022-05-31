@@ -2,54 +2,54 @@
 
 public with sharing class Transfer extends PokepayResponseBody {
     private String id;
-    private AccountWithoutPrivateMoneyDetail senderAccount;
-    private AccountWithoutPrivateMoneyDetail receiverAccount;
+    private AccountWithoutPrivateMoneyDetail sender_account;
+    private AccountWithoutPrivateMoneyDetail receiver_account;
     private Double amount;
-    private Double moneyAmount;
-    private Double pointAmount;
-    private String doneAt;
+    private Double money_amount;
+    private Double point_amount;
+    private String done_at;
     private String type;
     private String description;
-    private String transactionId;
+    private String transaction_id;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public AccountWithoutPrivateMoneyDetail getSenderAccount() {
-        return senderAccount;
+        return this.sender_account;
     }
 
     public AccountWithoutPrivateMoneyDetail getReceiverAccount() {
-        return receiverAccount;
+        return this.receiver_account;
     }
 
     public Double getAmount() {
-        return amount;
+        return this.amount;
     }
 
     public Double getMoneyAmount() {
-        return moneyAmount;
+        return this.money_amount;
     }
 
     public Double getPointAmount() {
-        return pointAmount;
+        return this.point_amount;
     }
 
     public String getDoneAt() {
-        return doneAt;
+        return this.done_at;
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public String getTransactionId() {
-        return transactionId;
+        return this.transaction_id;
     }
 }
 

@@ -2,17 +2,17 @@
 
 public with sharing class UpdateShop extends PokepayRequest {
     private String name;
-    private String postalCode;
+    private String postal_code;
     private String address;
     private String tel;
     private String email;
-    private String externalId;
-    private String[] privateMoneyIds;
-    private String[] canTopupPrivateMoneyIds;
-    private String shopId;
+    private String external_id;
+    private String[] private_money_ids;
+    private String[] can_topup_private_money_ids;
+    private String shop_id;
 
     public UpdateShop(String shopId) {
-        this.shopId = shopId;
+        this.shop_id = shopId;
     }
 
     public UpdateShop name(String name) {
@@ -21,7 +21,7 @@ public with sharing class UpdateShop extends PokepayRequest {
     }
 
     public UpdateShop postalCode(String postalCode) {
-        this.postalCode = postalCode;
+        this.postal_code = postalCode;
         return this;
     }
 
@@ -41,17 +41,17 @@ public with sharing class UpdateShop extends PokepayRequest {
     }
 
     public UpdateShop externalId(String externalId) {
-        this.externalId = externalId;
+        this.external_id = externalId;
         return this;
     }
 
     public UpdateShop privateMoneyIds(String[] privateMoneyIds) {
-        this.privateMoneyIds = privateMoneyIds;
+        this.private_money_ids = privateMoneyIds;
         return this;
     }
 
     public UpdateShop canTopupPrivateMoneyIds(String[] canTopupPrivateMoneyIds) {
-        this.canTopupPrivateMoneyIds = canTopupPrivateMoneyIds;
+        this.can_topup_private_money_ids = canTopupPrivateMoneyIds;
         return this;
     }
 
@@ -60,7 +60,7 @@ public with sharing class UpdateShop extends PokepayRequest {
     }
 
     public override String path() {
-        return '/shops' + '/' + this.shopId;
+        return '/shops' + '/' + this.shop_id;
     }
 
     public override Type getResponseClass() {
@@ -68,6 +68,6 @@ public with sharing class UpdateShop extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

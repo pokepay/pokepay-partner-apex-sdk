@@ -2,21 +2,21 @@
 
 public with sharing class CreateShopV2 extends PokepayRequest {
     private String name;
-    private String postalCode;
+    private String postal_code;
     private String address;
     private String tel;
     private String email;
-    private String externalId;
-    private String organizationCode;
-    private String[] privateMoneyIds;
-    private String[] canTopupPrivateMoneyIds;
+    private String external_id;
+    private String organization_code;
+    private String[] private_money_ids;
+    private String[] can_topup_private_money_ids;
 
     public CreateShopV2(String name) {
         this.name = name;
     }
 
     public CreateShopV2 postalCode(String postalCode) {
-        this.postalCode = postalCode;
+        this.postal_code = postalCode;
         return this;
     }
 
@@ -36,22 +36,22 @@ public with sharing class CreateShopV2 extends PokepayRequest {
     }
 
     public CreateShopV2 externalId(String externalId) {
-        this.externalId = externalId;
+        this.external_id = externalId;
         return this;
     }
 
     public CreateShopV2 organizationCode(String organizationCode) {
-        this.organizationCode = organizationCode;
+        this.organization_code = organizationCode;
         return this;
     }
 
     public CreateShopV2 privateMoneyIds(String[] privateMoneyIds) {
-        this.privateMoneyIds = privateMoneyIds;
+        this.private_money_ids = privateMoneyIds;
         return this;
     }
 
     public CreateShopV2 canTopupPrivateMoneyIds(String[] canTopupPrivateMoneyIds) {
-        this.canTopupPrivateMoneyIds = canTopupPrivateMoneyIds;
+        this.can_topup_private_money_ids = canTopupPrivateMoneyIds;
         return this;
     }
 
@@ -68,6 +68,6 @@ public with sharing class CreateShopV2 extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

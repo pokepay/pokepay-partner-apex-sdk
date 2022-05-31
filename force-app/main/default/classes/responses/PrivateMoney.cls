@@ -4,67 +4,67 @@ public with sharing class PrivateMoney extends PokepayResponseBody {
     private String id;
     private String name;
     private String unit;
-    private Boolean isExclusive;
+    private Boolean is_exclusive;
     private String description;
-    private String onelineMessage;
+    private String oneline_message;
     private Organization organization;
-    private Double maxBalance;
-    private Double transferLimit;
+    private Double max_balance;
+    private Double transfer_limit;
     private String type;
-    private String expirationType;
-    private Boolean enableTopupByMember;
-    private String displayMoneyAndPoint;
+    private String expiration_type;
+    private Boolean enable_topup_by_member;
+    private String display_money_and_point;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getUnit() {
-        return unit;
+        return this.unit;
     }
 
     public Boolean isExclusive() {
-        return isExclusive;
+        return this.is_exclusive;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public String getOnelineMessage() {
-        return onelineMessage;
+        return this.oneline_message;
     }
 
     public Organization getOrganization() {
-        return organization;
+        return this.organization;
     }
 
     public Double getMaxBalance() {
-        return maxBalance;
+        return this.max_balance;
     }
 
     public Double getTransferLimit() {
-        return transferLimit;
+        return this.transfer_limit;
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public String getExpirationType() {
-        return expirationType;
+        return this.expiration_type;
     }
 
     public Boolean getEnableTopupByMember() {
-        return enableTopupByMember;
+        return this.enable_topup_by_member;
     }
 
     public String getDisplayMoneyAndPoint() {
-        return displayMoneyAndPoint;
+        return this.display_money_and_point;
     }
 }
 

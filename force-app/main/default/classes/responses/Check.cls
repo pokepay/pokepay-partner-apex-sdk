@@ -3,68 +3,68 @@
 public with sharing class Check extends PokepayResponseBody {
     private String id;
     private Double amount;
-    private Double moneyAmount;
-    private Double pointAmount;
+    private Double money_amount;
+    private Double point_amount;
     private String description;
     private User user;
-    private Boolean isOnetime;
-    private Boolean isDisabled;
-    private String expiresAt;
-    private PrivateMoney privateMoney;
-    private Integer usageLimit;
-    private Double usageCount;
+    private Boolean is_onetime;
+    private Boolean is_disabled;
+    private String expires_at;
+    private PrivateMoney private_money;
+    private Integer usage_limit;
+    private Double usage_count;
     private String token;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public Double getAmount() {
-        return amount;
+        return this.amount;
     }
 
     public Double getMoneyAmount() {
-        return moneyAmount;
+        return this.money_amount;
     }
 
     public Double getPointAmount() {
-        return pointAmount;
+        return this.point_amount;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public User getUser() {
-        return user;
+        return this.user;
     }
 
     public Boolean isOnetime() {
-        return isOnetime;
+        return this.is_onetime;
     }
 
     public Boolean isDisabled() {
-        return isDisabled;
+        return this.is_disabled;
     }
 
     public String getExpiresAt() {
-        return expiresAt;
+        return this.expires_at;
     }
 
     public PrivateMoney getPrivateMoney() {
-        return privateMoney;
+        return this.private_money;
     }
 
     public Integer getUsageLimit() {
-        return usageLimit;
+        return this.usage_limit;
     }
 
     public Double getUsageCount() {
-        return usageCount;
+        return this.usage_count;
     }
 
     public String getToken() {
-        return token;
+        return this.token;
     }
 }
 

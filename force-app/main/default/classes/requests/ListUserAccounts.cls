@@ -2,11 +2,11 @@
 
 public with sharing class ListUserAccounts extends PokepayRequest {
     private Integer page;
-    private Integer perPage;
-    private String userId;
+    private Integer per_page;
+    private String user_id;
 
     public ListUserAccounts(String userId) {
-        this.userId = userId;
+        this.user_id = userId;
     }
 
     public ListUserAccounts page(Integer page) {
@@ -15,7 +15,7 @@ public with sharing class ListUserAccounts extends PokepayRequest {
     }
 
     public ListUserAccounts perPage(Integer perPage) {
-        this.perPage = perPage;
+        this.per_page = perPage;
         return this;
     }
 
@@ -24,7 +24,7 @@ public with sharing class ListUserAccounts extends PokepayRequest {
     }
 
     public override String path() {
-        return '/users' + '/' + this.userId + '/accounts';
+        return '/users' + '/' + this.user_id + '/accounts';
     }
 
     public override Type getResponseClass() {
@@ -32,6 +32,6 @@ public with sharing class ListUserAccounts extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

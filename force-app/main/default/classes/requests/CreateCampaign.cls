@@ -2,37 +2,37 @@
 
 public with sharing class CreateCampaign extends PokepayRequest {
     private String name;
-    private String privateMoneyId;
-    private String startsAt;
-    private String endsAt;
+    private String private_money_id;
+    private String starts_at;
+    private String ends_at;
     private Integer priority;
     private String event;
-    private String bearPointShopId;
+    private String bear_point_shop_id;
     private String description;
     private String status;
-    private String pointExpiresAt;
-    private Integer pointExpiresInDays;
-    private Boolean isExclusive;
+    private String point_expires_at;
+    private Integer point_expires_in_days;
+    private Boolean is_exclusive;
     private String subject;
-    private Object[] amountBasedPointRules;
-    private Object[] productBasedPointRules;
-    private Integer[] applicableDaysOfWeek;
-    private Object[] applicableTimeRanges;
-    private String[] applicableShopIds;
-    private Integer minimumNumberForCombinationPurchase;
-    private String destPrivateMoneyId;
+    private Object[] amount_based_point_rules;
+    private Object[] product_based_point_rules;
+    private Integer[] applicable_days_of_week;
+    private Object[] applicable_time_ranges;
+    private String[] applicable_shop_ids;
+    private Integer minimum_number_for_combination_purchase;
+    private String dest_private_money_id;
 
     public CreateCampaign(String name, String privateMoneyId, String startsAt, String endsAt, Integer priority, String event) {
         this.name = name;
-        this.privateMoneyId = privateMoneyId;
-        this.startsAt = startsAt;
-        this.endsAt = endsAt;
+        this.private_money_id = privateMoneyId;
+        this.starts_at = startsAt;
+        this.ends_at = endsAt;
         this.priority = priority;
         this.event = event;
     }
 
     public CreateCampaign bearPointShopId(String bearPointShopId) {
-        this.bearPointShopId = bearPointShopId;
+        this.bear_point_shop_id = bearPointShopId;
         return this;
     }
 
@@ -47,17 +47,17 @@ public with sharing class CreateCampaign extends PokepayRequest {
     }
 
     public CreateCampaign pointExpiresAt(String pointExpiresAt) {
-        this.pointExpiresAt = pointExpiresAt;
+        this.point_expires_at = pointExpiresAt;
         return this;
     }
 
     public CreateCampaign pointExpiresInDays(Integer pointExpiresInDays) {
-        this.pointExpiresInDays = pointExpiresInDays;
+        this.point_expires_in_days = pointExpiresInDays;
         return this;
     }
 
     public CreateCampaign setExclusive(Boolean exclusive) {
-        isExclusive = exclusive;
+        this.is_exclusive = exclusive;
         return this;
     }
 
@@ -67,37 +67,37 @@ public with sharing class CreateCampaign extends PokepayRequest {
     }
 
     public CreateCampaign amountBasedPointRules(Object[] amountBasedPointRules) {
-        this.amountBasedPointRules = amountBasedPointRules;
+        this.amount_based_point_rules = amountBasedPointRules;
         return this;
     }
 
     public CreateCampaign productBasedPointRules(Object[] productBasedPointRules) {
-        this.productBasedPointRules = productBasedPointRules;
+        this.product_based_point_rules = productBasedPointRules;
         return this;
     }
 
     public CreateCampaign applicableDaysOfWeek(Integer[] applicableDaysOfWeek) {
-        this.applicableDaysOfWeek = applicableDaysOfWeek;
+        this.applicable_days_of_week = applicableDaysOfWeek;
         return this;
     }
 
     public CreateCampaign applicableTimeRanges(Object[] applicableTimeRanges) {
-        this.applicableTimeRanges = applicableTimeRanges;
+        this.applicable_time_ranges = applicableTimeRanges;
         return this;
     }
 
     public CreateCampaign applicableShopIds(String[] applicableShopIds) {
-        this.applicableShopIds = applicableShopIds;
+        this.applicable_shop_ids = applicableShopIds;
         return this;
     }
 
     public CreateCampaign minimumNumberForCombinationPurchase(Integer minimumNumberForCombinationPurchase) {
-        this.minimumNumberForCombinationPurchase = minimumNumberForCombinationPurchase;
+        this.minimum_number_for_combination_purchase = minimumNumberForCombinationPurchase;
         return this;
     }
 
     public CreateCampaign destPrivateMoneyId(String destPrivateMoneyId) {
-        this.destPrivateMoneyId = destPrivateMoneyId;
+        this.dest_private_money_id = destPrivateMoneyId;
         return this;
     }
 
@@ -114,6 +114,6 @@ public with sharing class CreateCampaign extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

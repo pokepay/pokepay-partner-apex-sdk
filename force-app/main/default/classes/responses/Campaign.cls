@@ -3,83 +3,83 @@
 public with sharing class Campaign extends PokepayResponseBody {
     private String id;
     private String name;
-    private User[] applicableShops;
-    private Boolean isExclusive;
-    private String startsAt;
-    private String endsAt;
-    private String pointExpiresAt;
-    private Integer pointExpiresInDays;
+    private User[] applicable_shops;
+    private Boolean is_exclusive;
+    private String starts_at;
+    private String ends_at;
+    private String point_expires_at;
+    private Integer point_expires_in_days;
     private Integer priority;
     private String description;
-    private User bearPointShop;
-    private PrivateMoney privateMoney;
-    private PrivateMoney destPrivateMoney;
-    private String pointCalculationRule;
-    private String pointCalculationRuleObject;
+    private User bear_point_shop;
+    private PrivateMoney private_money;
+    private PrivateMoney dest_private_money;
+    private String point_calculation_rule;
+    private String point_calculation_rule_object;
     private String status;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public User[] getApplicableShops() {
-        return applicableShops;
+        return this.applicable_shops;
     }
 
     public Boolean isExclusive() {
-        return isExclusive;
+        return this.is_exclusive;
     }
 
     public String getStartsAt() {
-        return startsAt;
+        return this.starts_at;
     }
 
     public String getEndsAt() {
-        return endsAt;
+        return this.ends_at;
     }
 
     public String getPointExpiresAt() {
-        return pointExpiresAt;
+        return this.point_expires_at;
     }
 
     public Integer getPointExpiresInDays() {
-        return pointExpiresInDays;
+        return this.point_expires_in_days;
     }
 
     public Integer getPriority() {
-        return priority;
+        return this.priority;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public User getBearPointShop() {
-        return bearPointShop;
+        return this.bear_point_shop;
     }
 
     public PrivateMoney getPrivateMoney() {
-        return privateMoney;
+        return this.private_money;
     }
 
     public PrivateMoney getDestPrivateMoney() {
-        return destPrivateMoney;
+        return this.dest_private_money;
     }
 
     public String getPointCalculationRule() {
-        return pointCalculationRule;
+        return this.point_calculation_rule;
     }
 
     public String getPointCalculationRuleObject() {
-        return pointCalculationRuleObject;
+        return this.point_calculation_rule_object;
     }
 
     public String getStatus() {
-        return status;
+        return this.status;
     }
 }
 

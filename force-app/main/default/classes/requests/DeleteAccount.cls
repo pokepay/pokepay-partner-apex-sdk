@@ -2,10 +2,10 @@
 
 public with sharing class DeleteAccount extends PokepayRequest {
     private Boolean cashback;
-    private String accountId;
+    private String account_id;
 
     public DeleteAccount(String accountId) {
-        this.accountId = accountId;
+        this.account_id = accountId;
     }
 
     public DeleteAccount cashback(Boolean cashback) {
@@ -18,7 +18,7 @@ public with sharing class DeleteAccount extends PokepayRequest {
     }
 
     public override String path() {
-        return '/accounts' + '/' + this.accountId;
+        return '/accounts' + '/' + this.account_id;
     }
 
     public override Type getResponseClass() {
@@ -26,6 +26,6 @@ public with sharing class DeleteAccount extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

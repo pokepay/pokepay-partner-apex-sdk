@@ -2,29 +2,29 @@
 
 public with sharing class PaginatedTransactionV2 extends PokepayResponseBody {
     private PokepayTransaction[] rows;
-    private Integer perPage;
+    private Integer per_page;
     private Integer count;
-    private String nextPageCursorId;
-    private String prevPageCursorId;
+    private String next_page_cursor_id;
+    private String prev_page_cursor_id;
 
     public PokepayTransaction[] getRows() {
-        return rows;
+        return this.rows;
     }
 
     public Integer getPerPage() {
-        return perPage;
+        return this.per_page;
     }
 
     public Integer getCount() {
-        return count;
+        return this.count;
     }
 
     public String getNextPageCursorId() {
-        return nextPageCursorId;
+        return this.next_page_cursor_id;
     }
 
     public String getPrevPageCursorId() {
-        return prevPageCursorId;
+        return this.prev_page_cursor_id;
     }
 }
 

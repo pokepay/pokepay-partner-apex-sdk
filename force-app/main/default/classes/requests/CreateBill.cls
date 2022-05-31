@@ -2,13 +2,13 @@
 
 public with sharing class CreateBill extends PokepayRequest {
     private Double amount;
-    private String privateMoneyId;
-    private String shopId;
+    private String private_money_id;
+    private String shop_id;
     private String description;
 
     public CreateBill(String privateMoneyId, String shopId) {
-        this.privateMoneyId = privateMoneyId;
-        this.shopId = shopId;
+        this.private_money_id = privateMoneyId;
+        this.shop_id = shopId;
     }
 
     public CreateBill amount(Double amount) {
@@ -34,6 +34,6 @@ public with sharing class CreateBill extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

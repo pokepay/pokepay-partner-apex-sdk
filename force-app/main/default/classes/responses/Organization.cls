@@ -5,11 +5,11 @@ public with sharing class Organization extends PokepayResponseBody {
     private String name;
 
     public String getCode() {
-        return code;
+        return this.code;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 }
 

@@ -6,15 +6,15 @@ public with sharing class PaginatedAccountBalance extends PokepayResponseBody {
     private Pagination pagination;
 
     public AccountBalance[] getRows() {
-        return rows;
+        return this.rows;
     }
 
     public Integer getCount() {
-        return count;
+        return this.count;
     }
 
     public Pagination getPagination() {
-        return pagination;
+        return this.pagination;
     }
 }
 

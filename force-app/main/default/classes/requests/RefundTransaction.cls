@@ -2,10 +2,10 @@
 
 public with sharing class RefundTransaction extends PokepayRequest {
     private String description;
-    private String transactionId;
+    private String transaction_id;
 
     public RefundTransaction(String transactionId) {
-        this.transactionId = transactionId;
+        this.transaction_id = transactionId;
     }
 
     public RefundTransaction description(String description) {
@@ -18,7 +18,7 @@ public with sharing class RefundTransaction extends PokepayRequest {
     }
 
     public override String path() {
-        return '/transactions' + '/' + this.transactionId + '/refund';
+        return '/transactions' + '/' + this.transaction_id + '/refund';
     }
 
     public override Type getResponseClass() {
@@ -26,6 +26,6 @@ public with sharing class RefundTransaction extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

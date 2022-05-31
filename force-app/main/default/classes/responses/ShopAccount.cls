@@ -3,28 +3,28 @@
 public with sharing class ShopAccount extends PokepayResponseBody {
     private String id;
     private String name;
-    private Boolean isSuspended;
-    private Boolean canTransferTopup;
-    private PrivateMoney privateMoney;
+    private Boolean is_suspended;
+    private Boolean can_transfer_topup;
+    private PrivateMoney private_money;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public Boolean isSuspended() {
-        return isSuspended;
+        return this.is_suspended;
     }
 
     public Boolean getCanTransferTopup() {
-        return canTransferTopup;
+        return this.can_transfer_topup;
     }
 
     public PrivateMoney getPrivateMoney() {
-        return privateMoney;
+        return this.private_money;
     }
 }
 

@@ -2,49 +2,49 @@
 
 public with sharing class BulkTransaction extends PokepayResponseBody {
     private String id;
-    private String requestId;
+    private String request_id;
     private String name;
     private String description;
     private String status;
     private String error;
-    private Integer errorLineno;
-    private String submittedAt;
-    private String updatedAt;
+    private Integer error_lineno;
+    private String submitted_at;
+    private String updated_at;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getRequestId() {
-        return requestId;
+        return this.request_id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public String getStatus() {
-        return status;
+        return this.status;
     }
 
     public String getError() {
-        return error;
+        return this.error;
     }
 
     public Integer getErrorLineno() {
-        return errorLineno;
+        return this.error_lineno;
     }
 
     public String getSubmittedAt() {
-        return submittedAt;
+        return this.submitted_at;
     }
 
     public String getUpdatedAt() {
-        return updatedAt;
+        return this.updated_at;
     }
 }
 

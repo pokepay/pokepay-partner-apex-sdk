@@ -6,15 +6,15 @@ public with sharing class PaginatedTransfers extends PokepayResponseBody {
     private Pagination pagination;
 
     public Transfer[] getRows() {
-        return rows;
+        return this.rows;
     }
 
     public Integer getCount() {
-        return count;
+        return this.count;
     }
 
     public Pagination getPagination() {
-        return pagination;
+        return this.pagination;
     }
 }
 

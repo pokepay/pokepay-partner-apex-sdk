@@ -2,29 +2,29 @@
 
 public with sharing class CashtrayAttempt extends PokepayResponseBody {
     private AccountWithUser account;
-    private Double statusCode;
-    private String errorType;
-    private String errorMessage;
-    private String createdAt;
+    private Double status_code;
+    private String error_type;
+    private String error_message;
+    private String created_at;
 
     public AccountWithUser getAccount() {
-        return account;
+        return this.account;
     }
 
     public Double getStatusCode() {
-        return statusCode;
+        return this.status_code;
     }
 
     public String getErrorType() {
-        return errorType;
+        return this.error_type;
     }
 
     public String getErrorMessage() {
-        return errorMessage;
+        return this.error_message;
     }
 
     public String getCreatedAt() {
-        return createdAt;
+        return this.created_at;
     }
 }
 

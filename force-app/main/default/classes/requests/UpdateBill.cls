@@ -3,11 +3,11 @@
 public with sharing class UpdateBill extends PokepayRequest {
     private Double amount;
     private String description;
-    private Boolean isDisabled;
-    private String billId;
+    private Boolean is_disabled;
+    private String bill_id;
 
     public UpdateBill(String billId) {
-        this.billId = billId;
+        this.bill_id = billId;
     }
 
     public UpdateBill amount(Double amount) {
@@ -21,7 +21,7 @@ public with sharing class UpdateBill extends PokepayRequest {
     }
 
     public UpdateBill setDisabled(Boolean disabled) {
-        isDisabled = disabled;
+        this.is_disabled = disabled;
         return this;
     }
 
@@ -30,7 +30,7 @@ public with sharing class UpdateBill extends PokepayRequest {
     }
 
     public override String path() {
-        return '/bills' + '/' + this.billId;
+        return '/bills' + '/' + this.bill_id;
     }
 
     public override Type getResponseClass() {
@@ -38,6 +38,6 @@ public with sharing class UpdateBill extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this);
+        return JSON.serialize(this, true);
     }
 }

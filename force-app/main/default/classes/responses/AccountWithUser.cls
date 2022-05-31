@@ -3,33 +3,33 @@
 public with sharing class AccountWithUser extends PokepayResponseBody {
     private String id;
     private String name;
-    private Boolean isSuspended;
-    private AccountStatus status;
-    private PrivateMoney privateMoney;
+    private Boolean is_suspended;
+    private String status;
+    private PrivateMoney private_money;
     private User user;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public Boolean isSuspended() {
-        return isSuspended;
+        return this.is_suspended;
     }
 
-    public AccountStatus getStatus() {
-        return status;
+    public String getStatus() {
+        return this.status;
     }
 
     public PrivateMoney getPrivateMoney() {
-        return privateMoney;
+        return this.private_money;
     }
 
     public User getUser() {
-        return user;
+        return this.user;
     }
 }
 

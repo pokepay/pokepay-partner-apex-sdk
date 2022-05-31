@@ -3,43 +3,43 @@
 public with sharing class Bill extends PokepayResponseBody {
     private String id;
     private Double amount;
-    private Double maxAmount;
-    private Double minAmount;
+    private Double max_amount;
+    private Double min_amount;
     private String description;
     private AccountWithUser account;
-    private Boolean isDisabled;
+    private Boolean is_disabled;
     private String token;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public Double getAmount() {
-        return amount;
+        return this.amount;
     }
 
     public Double getMaxAmount() {
-        return maxAmount;
+        return this.max_amount;
     }
 
     public Double getMinAmount() {
-        return minAmount;
+        return this.min_amount;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public AccountWithUser getAccount() {
-        return account;
+        return this.account;
     }
 
     public Boolean isDisabled() {
-        return isDisabled;
+        return this.is_disabled;
     }
 
     public String getToken() {
-        return token;
+        return this.token;
     }
 }
 

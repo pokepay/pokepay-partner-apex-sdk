@@ -2,29 +2,29 @@
 
 public with sharing class Pagination extends PokepayResponseBody {
     private Integer current;
-    private Integer perPage;
-    private Integer maxPage;
-    private Boolean hasPrev;
-    private Boolean hasNext;
+    private Integer per_page;
+    private Integer max_page;
+    private Boolean has_prev;
+    private Boolean has_next;
 
     public Integer getCurrent() {
-        return current;
+        return this.current;
     }
 
     public Integer getPerPage() {
-        return perPage;
+        return this.per_page;
     }
 
     public Integer getMaxPage() {
-        return maxPage;
+        return this.max_page;
     }
 
     public Boolean getHasPrev() {
-        return hasPrev;
+        return this.has_prev;
     }
 
     public Boolean getHasNext() {
-        return hasNext;
+        return this.has_next;
     }
 }
 

@@ -28,4 +28,16 @@ System.debug('status:' + res.getStatusCode());
 System.debug('body:' + res.getResponseBody());
 System.debug('res:' + res);
 
-HttpResponse res2 = c.call('POST', '/shops', '{}');
+//PokepayResponse res2 = c.send(new GetShop('8b9fbece-73fa-494d-bad5-c7fd9e52f9a0'));
+// PokepayResponse res2 = c.send(new ListBills());
+//PaginatedTransaction body2 = (PaginatedTransaction)res.getResponseBody();
+//System.debug('status2:' + res2.getStatusCode());
+//System.debug('body2:' + res2.getResponseBody());
+// System.debug('res2:' + res2);
+
+// 23:39:01.374 (1210483465)|USER_DEBUG|[111]|DEBUG|reqObj.getRequestBody(){"upperLimitAmount":null,"shopName":null,"shopId":null,"privateMoneyId":null,"perPage":null,"page":null,"organizationCode":null,"lowerLimitAmount":null,"isDisabled":null,"description":null,"createdTo":null,"createdFrom":null,"billId":null}
+// 23:39:01.374 (1308225245)|USER_DEBUG|[126]|DEBUG|reqObj.getResponseClass():PaginatedBills
+// 23:39:01.374 (1308259821)|USER_DEBUG|[127]|DEBUG|responseBody:{"type":"invalid_parameters","message":"Invalid parameters","errors":{"invalid":["description","page"],"unpermitted":["billId","createdFrom","createdTo","isDisabled","lowerLimitAmount","organizationCode","perPage","privateMoneyId","shopId","shopName","upperLimitAmount"]}}
+
+ListBills reqObj = new ListBills();
+System.debug('reqObj.getRequestBody(): ' , reqObj.getRequestBody());

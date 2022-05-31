@@ -3,18 +3,18 @@
 public with sharing class User extends PokepayResponseBody {
     private String id;
     private String name;
-    private Boolean isMerchant;
+    private Boolean is_merchant;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public Boolean isMerchant() {
-        return isMerchant;
+        return this.is_merchant;
     }
 }
 

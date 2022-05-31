@@ -3,43 +3,43 @@
 public with sharing class ShopWithMetadata extends PokepayResponseBody {
     private String id;
     private String name;
-    private String organizationCode;
-    private String postalCode;
+    private String organization_code;
+    private String postal_code;
     private String address;
     private String tel;
     private String email;
-    private String externalId;
+    private String external_id;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getOrganizationCode() {
-        return organizationCode;
+        return this.organization_code;
     }
 
     public String getPostalCode() {
-        return postalCode;
+        return this.postal_code;
     }
 
     public String getAddress() {
-        return address;
+        return this.address;
     }
 
     public String getTel() {
-        return tel;
+        return this.tel;
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public String getExternalId() {
-        return externalId;
+        return this.external_id;
     }
 }
 

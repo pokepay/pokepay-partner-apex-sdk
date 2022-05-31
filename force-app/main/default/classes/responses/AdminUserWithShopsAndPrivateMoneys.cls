@@ -5,41 +5,41 @@ public with sharing class AdminUserWithShopsAndPrivateMoneys extends PokepayResp
     private String role;
     private String email;
     private String name;
-    private Boolean isActive;
+    private Boolean is_active;
     private Organization organization;
     private User[] shops;
-    private PrivateMoney[] privateMoneys;
+    private PrivateMoney[] private_moneys;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getRole() {
-        return role;
+        return this.role;
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public Boolean isActive() {
-        return isActive;
+        return this.is_active;
     }
 
     public Organization getOrganization() {
-        return organization;
+        return this.organization;
     }
 
     public User[] getShops() {
-        return shops;
+        return this.shops;
     }
 
     public PrivateMoney[] getPrivateMoneys() {
-        return privateMoneys;
+        return this.private_moneys;
     }
 }
 

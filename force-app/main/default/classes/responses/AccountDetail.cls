@@ -3,53 +3,53 @@
 public with sharing class AccountDetail extends PokepayResponseBody {
     private String id;
     private String name;
-    private Boolean isSuspended;
-    private AccountStatus status;
+    private Boolean is_suspended;
+    private String status;
     private Double balance;
-    private Double moneyBalance;
-    private Double pointBalance;
-    private PrivateMoney privateMoney;
+    private Double money_balance;
+    private Double point_balance;
+    private PrivateMoney private_money;
     private User user;
-    private String externalId;
+    private String external_id;
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public Boolean isSuspended() {
-        return isSuspended;
+        return this.is_suspended;
     }
 
-    public AccountStatus getStatus() {
-        return status;
+    public String getStatus() {
+        return this.status;
     }
 
     public Double getBalance() {
-        return balance;
+        return this.balance;
     }
 
     public Double getMoneyBalance() {
-        return moneyBalance;
+        return this.money_balance;
     }
 
     public Double getPointBalance() {
-        return pointBalance;
+        return this.point_balance;
     }
 
     public PrivateMoney getPrivateMoney() {
-        return privateMoney;
+        return this.private_money;
     }
 
     public User getUser() {
-        return user;
+        return this.user;
     }
 
     public String getExternalId() {
-        return externalId;
+        return this.external_id;
     }
 }
 

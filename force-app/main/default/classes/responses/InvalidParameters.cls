@@ -6,15 +6,15 @@ public with sharing class InvalidParameters extends PokepayResponseBody {
     private Object errors;
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public String getMessage() {
-        return message;
+        return this.message;
     }
 
     public Object getErrors() {
-        return errors;
+        return this.errors;
     }
 }
 

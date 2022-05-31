@@ -4,7 +4,7 @@ public with sharing class Pong extends PokepayResponseBody {
     private String pong;
 
     public String getPong() {
-        return pong;
+        return this.pong;
     }
 }
 

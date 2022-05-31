@@ -5,11 +5,11 @@ public with sharing class PartnerDecryptionFailed extends PokepayResponseBody {
     private String message;
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public String getMessage() {
-        return message;
+        return this.message;
     }
 }
 

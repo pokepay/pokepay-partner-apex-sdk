@@ -50,6 +50,22 @@ public with sharing class ListAccountBalances extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this, true);
+        Map<String, Object> requestMap = new Map<String, Object>();
+        if(this.page != null){
+            requestMap.put('page', this.page);
+        }
+        if(this.per_page != null){
+            requestMap.put('per_page', this.per_page);
+        }
+        if(this.expires_at_from != null){
+            requestMap.put('expires_at_from', this.expires_at_from);
+        }
+        if(this.expires_at_to != null){
+            requestMap.put('expires_at_to', this.expires_at_to);
+        }
+        if(this.direction != null){
+            requestMap.put('direction', this.direction);
+        }
+        return JSON.serialize(requestMap, true);
     }
 }

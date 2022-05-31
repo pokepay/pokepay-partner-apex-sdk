@@ -44,6 +44,19 @@ public with sharing class GetPrivateMoneyOrganizationSummaries extends PokepayRe
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this, true);
+        Map<String, Object> requestMap = new Map<String, Object>();
+        if(this.start_from != null){
+            requestMap.put('from', this.start_from);
+        }
+        if(this.to != null){
+            requestMap.put('to', this.to);
+        }
+        if(this.page != null){
+            requestMap.put('page', this.page);
+        }
+        if(this.per_page != null){
+            requestMap.put('per_page', this.per_page);
+        }
+        return JSON.serialize(requestMap, true);
     }
 }

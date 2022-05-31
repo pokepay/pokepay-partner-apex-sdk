@@ -32,6 +32,13 @@ public with sharing class GetPrivateMoneySummary extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this, true);
+        Map<String, Object> requestMap = new Map<String, Object>();
+        if(this.start_from != null){
+            requestMap.put('from', this.start_from);
+        }
+        if(this.to != null){
+            requestMap.put('to', this.to);
+        }
+        return JSON.serialize(requestMap, true);
     }
 }

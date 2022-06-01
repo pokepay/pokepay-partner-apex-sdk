@@ -107,7 +107,10 @@ public with sharing class PokepayClient {
             'request_method=' + reqObj.method();
         this.req.setMethod(reqObj.method());
         this.req.setEndpoint(this.baseUrl + reqObj.path());
+
         System.debug('url: ' + this.req.getEndpoint());
+        System.debug('reqObj.getRequestBody()' + reqObj.getRequestBody());
+
         this.req.setBody(params);
         HTTPResponse res = this.client.send(req);
         String responseBody = res.getBody();
@@ -122,9 +125,24 @@ public with sharing class PokepayClient {
             }
         }
         
+        System.debug('reqObj.getResponseClass():' + reqObj.getResponseClass());
+        System.debug('responseBody:' + responseBody);
+        System.debug('res.getStatusCode()' + res.getStatusCode());
+
+        Integer status = res.getStatusCode();
+
+        if(500 <= status && status <= 599){
+            throw new PokepayErrorException(status, 'server_error', 'Internal Server Error', null);
+        } else if(status < 200 || 299 < status){
+            Map<String, Object> err = (Map<String, Object>) JSON.deserializeUntyped(responseBody);
+            String errType = (String)err.get('type');
+            String errMessage = (String)err.get('message');
+            throw new PokepayErrorException(status, errType, errMessage, err.get('errors'));
+        }
+
         return new PokepayResponse(
-            res.getStatusCode(),
+            status,
             JSON.deserializeStrict(responseBody, reqObj.getResponseClass())
-            );
+        );
     }
 }

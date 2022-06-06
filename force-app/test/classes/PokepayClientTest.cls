@@ -1,5 +1,5 @@
 @isTest
-private class SendEchoTest {
+private class PokepayClientTest {
 
     @isTest static void testOk() {
         Test.setMock(HttpCalloutMock.class, new SendEchoResponseGenerator());

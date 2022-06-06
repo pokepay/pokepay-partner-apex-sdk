@@ -39,5 +39,36 @@ System.debug('res:' + res);
 // 23:39:01.374 (1308225245)|USER_DEBUG|[126]|DEBUG|reqObj.getResponseClass():PaginatedBills
 // 23:39:01.374 (1308259821)|USER_DEBUG|[127]|DEBUG|responseBody:{"type":"invalid_parameters","message":"Invalid parameters","errors":{"invalid":["description","page"],"unpermitted":["billId","createdFrom","createdTo","isDisabled","lowerLimitAmount","organizationCode","perPage","privateMoneyId","shopId","shopName","upperLimitAmount"]}}
 
+// GET request which contain request body
+
 ListBills reqObj = new ListBills();
-System.debug('reqObj.getRequestBody(): ' , reqObj.getRequestBody());
+reqObj = reqObj.page(1).privateMoneyId('4b138a4c-8944-4f98-a5c4-96d3c1c415eb');
+
+System.debug('reqObj.getRequestBody(): ' + reqObj.getRequestBody());
+
+PokepayResponse res2 = c.send(reqObj);
+PaginatedBills body2 = (PaginatedBills)res2.getResponseBody();
+System.debug('body2.getRows()[0]: ' + body2.getRows()[0]);
+
+System.debug('body2.getRows()[0].getAccount(): ' + body2.getRows()[0].getAccount());
+
+// Invalid parameter
+
+ListBills reqObj3 = new ListBills();
+reqObj3 = reqObj3.page(-1).privateMoneyId('4b138a4c-8944-4f98-a5c4-96d3c1c415eb-foobar');
+
+try{
+    PokepayResponse res3 = c.send(reqObj3);
+} catch (PokepayErrorException e){
+    System.debug('e: ' + e);
+}
+
+// Notfound
+
+GetTransaction reqObj4 = new GetTransaction('5d1b584a-0bca-4a58-b851-66f86625d63e');
+
+try{
+    PokepayResponse res4 = c.send(reqObj4);
+} catch (PokepayErrorException e){
+    System.debug('e: ' + e);
+}

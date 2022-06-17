@@ -26,6 +26,10 @@ public with sharing class DeleteAccount extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this, true);
+        Map<String, Object> requestMap = new Map<String, Object>();
+        if(this.cashback != null){
+            requestMap.put('cashback', this.cashback);
+        }
+        return JSON.serialize(requestMap, true);
     }
 }

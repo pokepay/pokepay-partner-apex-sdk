@@ -26,6 +26,10 @@ public with sharing class RefundExternalTransaction extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this, true);
+        Map<String, Object> requestMap = new Map<String, Object>();
+        if(this.description != null){
+            requestMap.put('description', this.description);
+        }
+        return JSON.serialize(requestMap, true);
     }
 }

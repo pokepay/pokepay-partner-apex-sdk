@@ -2,7 +2,7 @@
 
 public with sharing class CashtrayWithResult extends PokepayResponseBody {
     private String id;
-    private Double amount;
+    private Decimal amount;
     private String description;
     private AccountWithUser account;
     private String expires_at;
@@ -15,7 +15,7 @@ public with sharing class CashtrayWithResult extends PokepayResponseBody {
         return this.id;
     }
 
-    public Double getAmount() {
+    public Decimal getAmount() {
         return this.amount;
     }
 

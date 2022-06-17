@@ -3,13 +3,13 @@
 public with sharing class CreateCpmTransaction extends PokepayRequest {
     private String cpm_token;
     private String shop_id;
-    private Double amount;
+    private Decimal amount;
     private String description;
     private String metadata;
     private Object[] products;
     private String request_id;
 
-    public CreateCpmTransaction(String cpmToken, String shopId, Double amount) {
+    public CreateCpmTransaction(String cpmToken, String shopId, Decimal amount) {
         this.cpm_token = cpmToken;
         this.shop_id = shopId;
         this.amount = amount;

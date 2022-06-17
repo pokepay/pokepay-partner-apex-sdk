@@ -38,6 +38,16 @@ public with sharing class UpdateAccount extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this, true);
+        Map<String, Object> requestMap = new Map<String, Object>();
+        if(this.is_suspended != null){
+            requestMap.put('is_suspended', this.is_suspended);
+        }
+        if(this.status != null){
+            requestMap.put('status', this.status);
+        }
+        if(this.can_transfer_topup != null){
+            requestMap.put('can_transfer_topup', this.can_transfer_topup);
+        }
+        return JSON.serialize(requestMap, true);
     }
 }

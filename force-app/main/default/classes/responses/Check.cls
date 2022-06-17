@@ -2,9 +2,9 @@
 
 public with sharing class Check extends PokepayResponseBody {
     private String id;
-    private Double amount;
-    private Double money_amount;
-    private Double point_amount;
+    private Decimal amount;
+    private Decimal money_amount;
+    private Decimal point_amount;
     private String description;
     private User user;
     private Boolean is_onetime;
@@ -12,22 +12,22 @@ public with sharing class Check extends PokepayResponseBody {
     private String expires_at;
     private PrivateMoney private_money;
     private Integer usage_limit;
-    private Double usage_count;
+    private Decimal usage_count;
     private String token;
 
     public String getId() {
         return this.id;
     }
 
-    public Double getAmount() {
+    public Decimal getAmount() {
         return this.amount;
     }
 
-    public Double getMoneyAmount() {
+    public Decimal getMoneyAmount() {
         return this.money_amount;
     }
 
-    public Double getPointAmount() {
+    public Decimal getPointAmount() {
         return this.point_amount;
     }
 
@@ -59,7 +59,7 @@ public with sharing class Check extends PokepayResponseBody {
         return this.usage_limit;
     }
 
-    public Double getUsageCount() {
+    public Decimal getUsageCount() {
         return this.usage_count;
     }
 

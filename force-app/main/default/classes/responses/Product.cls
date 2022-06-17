@@ -3,8 +3,8 @@
 public with sharing class Product extends PokepayResponseBody {
     private String jan_code;
     private String name;
-    private Double unit_price;
-    private Double price;
+    private Decimal unit_price;
+    private Decimal price;
     private Boolean is_discounted;
     private String other;
 
@@ -16,11 +16,11 @@ public with sharing class Product extends PokepayResponseBody {
         return this.name;
     }
 
-    public Double getUnitPrice() {
+    public Decimal getUnitPrice() {
         return this.unit_price;
     }
 
-    public Double getPrice() {
+    public Decimal getPrice() {
         return this.price;
     }
 

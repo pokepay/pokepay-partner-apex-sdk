@@ -2,18 +2,18 @@
 
 public with sharing class AccountBalance extends PokepayResponseBody {
     private String expires_at;
-    private Double money_amount;
-    private Double point_amount;
+    private Decimal money_amount;
+    private Decimal point_amount;
 
     public String getExpiresAt() {
         return this.expires_at;
     }
 
-    public Double getMoneyAmount() {
+    public Decimal getMoneyAmount() {
         return this.money_amount;
     }
 
-    public Double getPointAmount() {
+    public Decimal getPointAmount() {
         return this.point_amount;
     }
 }

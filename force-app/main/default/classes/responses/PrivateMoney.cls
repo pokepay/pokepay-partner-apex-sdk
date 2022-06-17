@@ -8,8 +8,8 @@ public with sharing class PrivateMoney extends PokepayResponseBody {
     private String description;
     private String oneline_message;
     private Organization organization;
-    private Double max_balance;
-    private Double transfer_limit;
+    private Decimal max_balance;
+    private Decimal transfer_limit;
     private String type;
     private String expiration_type;
     private Boolean enable_topup_by_member;
@@ -43,11 +43,11 @@ public with sharing class PrivateMoney extends PokepayResponseBody {
         return this.organization;
     }
 
-    public Double getMaxBalance() {
+    public Decimal getMaxBalance() {
         return this.max_balance;
     }
 
-    public Double getTransferLimit() {
+    public Decimal getTransferLimit() {
         return this.transfer_limit;
     }
 

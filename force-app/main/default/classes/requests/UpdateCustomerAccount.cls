@@ -38,6 +38,16 @@ public with sharing class UpdateCustomerAccount extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this, true);
+        Map<String, Object> requestMap = new Map<String, Object>();
+        if(this.status != null){
+            requestMap.put('status', this.status);
+        }
+        if(this.account_name != null){
+            requestMap.put('account_name', this.account_name);
+        }
+        if(this.external_id != null){
+            requestMap.put('external_id', this.external_id);
+        }
+        return JSON.serialize(requestMap, true);
     }
 }

@@ -5,9 +5,9 @@ public with sharing class AccountDetail extends PokepayResponseBody {
     private String name;
     private Boolean is_suspended;
     private String status;
-    private Double balance;
-    private Double money_balance;
-    private Double point_balance;
+    private Decimal balance;
+    private Decimal money_balance;
+    private Decimal point_balance;
     private PrivateMoney private_money;
     private User user;
     private String external_id;
@@ -28,15 +28,15 @@ public with sharing class AccountDetail extends PokepayResponseBody {
         return this.status;
     }
 
-    public Double getBalance() {
+    public Decimal getBalance() {
         return this.balance;
     }
 
-    public Double getMoneyBalance() {
+    public Decimal getMoneyBalance() {
         return this.money_balance;
     }
 
-    public Double getPointBalance() {
+    public Decimal getPointBalance() {
         return this.point_balance;
     }
 

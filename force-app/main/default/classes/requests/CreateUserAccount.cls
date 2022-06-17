@@ -34,6 +34,16 @@ public with sharing class CreateUserAccount extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this, true);
+        Map<String, Object> requestMap = new Map<String, Object>();
+        if(this.private_money_id != null){
+            requestMap.put('private_money_id', this.private_money_id);
+        }
+        if(this.name != null){
+            requestMap.put('name', this.name);
+        }
+        if(this.external_id != null){
+            requestMap.put('external_id', this.external_id);
+        }
+        return JSON.serialize(requestMap, true);
     }
 }

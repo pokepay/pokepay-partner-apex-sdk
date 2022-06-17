@@ -2,9 +2,9 @@
 
 public with sharing class Bill extends PokepayResponseBody {
     private String id;
-    private Double amount;
-    private Double max_amount;
-    private Double min_amount;
+    private Decimal amount;
+    private Decimal max_amount;
+    private Decimal min_amount;
     private String description;
     private AccountWithUser account;
     private Boolean is_disabled;
@@ -14,15 +14,15 @@ public with sharing class Bill extends PokepayResponseBody {
         return this.id;
     }
 
-    public Double getAmount() {
+    public Decimal getAmount() {
         return this.amount;
     }
 
-    public Double getMaxAmount() {
+    public Decimal getMaxAmount() {
         return this.max_amount;
     }
 
-    public Double getMinAmount() {
+    public Decimal getMinAmount() {
         return this.min_amount;
     }
 

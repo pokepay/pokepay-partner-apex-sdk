@@ -105,11 +105,12 @@ public with sharing class PokepayClient {
         String params = 'partner_client_id=' + clientId + '&' +
             'data=' + encrypt(encryptData, this.clientSecret) + '&' +
             'request_method=' + reqObj.method();
-        this.req.setMethod(reqObj.method());
+        this.req.setMethod('POST');
         this.req.setEndpoint(this.baseUrl + reqObj.path());
 
         System.debug('url: ' + this.req.getEndpoint());
-        System.debug('reqObj.getRequestBody()' + reqObj.getRequestBody());
+        System.debug('reqObj.getRequestBody(): ' + reqObj.getRequestBody());
+        System.debug('params: ' + params);
 
         this.req.setBody(params);
         HTTPResponse res = this.client.send(req);

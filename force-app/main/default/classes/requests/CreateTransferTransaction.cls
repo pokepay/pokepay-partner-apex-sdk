@@ -4,12 +4,12 @@ public with sharing class CreateTransferTransaction extends PokepayRequest {
     private String sender_id;
     private String receiver_id;
     private String private_money_id;
-    private Double amount;
+    private Decimal amount;
     private String metadata;
     private String description;
     private String request_id;
 
-    public CreateTransferTransaction(String senderId, String receiverId, String privateMoneyId, Double amount) {
+    public CreateTransferTransaction(String senderId, String receiverId, String privateMoneyId, Decimal amount) {
         this.sender_id = senderId;
         this.receiver_id = receiverId;
         this.private_money_id = privateMoneyId;

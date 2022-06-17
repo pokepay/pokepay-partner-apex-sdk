@@ -2,7 +2,7 @@
 
 public with sharing class CashtrayAttempt extends PokepayResponseBody {
     private AccountWithUser account;
-    private Double status_code;
+    private Decimal status_code;
     private String error_type;
     private String error_message;
     private String created_at;
@@ -11,7 +11,7 @@ public with sharing class CashtrayAttempt extends PokepayResponseBody {
         return this.account;
     }
 
-    public Double getStatusCode() {
+    public Decimal getStatusCode() {
         return this.status_code;
     }
 

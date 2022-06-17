@@ -3,10 +3,10 @@
 public with sharing class UserTransaction extends PokepayResponseBody {
     private String id;
     private User user;
-    private Double balance;
-    private Double amount;
-    private Double money_amount;
-    private Double point_amount;
+    private Decimal balance;
+    private Decimal amount;
+    private Decimal money_amount;
+    private Decimal point_amount;
     private Account account;
     private String description;
     private String done_at;
@@ -21,19 +21,19 @@ public with sharing class UserTransaction extends PokepayResponseBody {
         return this.user;
     }
 
-    public Double getBalance() {
+    public Decimal getBalance() {
         return this.balance;
     }
 
-    public Double getAmount() {
+    public Decimal getAmount() {
         return this.amount;
     }
 
-    public Double getMoneyAmount() {
+    public Decimal getMoneyAmount() {
         return this.money_amount;
     }
 
-    public Double getPointAmount() {
+    public Decimal getPointAmount() {
         return this.point_amount;
     }
 

@@ -4,11 +4,11 @@ public with sharing class CreateExchangeTransaction extends PokepayRequest {
     private String user_id;
     private String sender_private_money_id;
     private String receiver_private_money_id;
-    private Double amount;
+    private Decimal amount;
     private String description;
     private String request_id;
 
-    public CreateExchangeTransaction(String userId, String senderPrivateMoneyId, String receiverPrivateMoneyId, Double amount) {
+    public CreateExchangeTransaction(String userId, String senderPrivateMoneyId, String receiverPrivateMoneyId, Decimal amount) {
         this.user_id = userId;
         this.sender_private_money_id = senderPrivateMoneyId;
         this.receiver_private_money_id = receiverPrivateMoneyId;

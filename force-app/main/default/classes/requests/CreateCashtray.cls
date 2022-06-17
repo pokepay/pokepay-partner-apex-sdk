@@ -3,11 +3,11 @@
 public with sharing class CreateCashtray extends PokepayRequest {
     private String private_money_id;
     private String shop_id;
-    private Double amount;
+    private Decimal amount;
     private String description;
     private Integer expires_in;
 
-    public CreateCashtray(String privateMoneyId, String shopId, Double amount) {
+    public CreateCashtray(String privateMoneyId, String shopId, Decimal amount) {
         this.private_money_id = privateMoneyId;
         this.shop_id = shopId;
         this.amount = amount;

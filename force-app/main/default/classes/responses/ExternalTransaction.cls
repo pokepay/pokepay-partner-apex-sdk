@@ -7,7 +7,7 @@ public with sharing class ExternalTransaction extends PokepayResponseBody {
     private Account sender_account;
     private User receiver;
     private Account receiver_account;
-    private Double amount;
+    private Decimal amount;
     private String done_at;
     private String description;
 
@@ -35,7 +35,7 @@ public with sharing class ExternalTransaction extends PokepayResponseBody {
         return this.receiver_account;
     }
 
-    public Double getAmount() {
+    public Decimal getAmount() {
         return this.amount;
     }
 

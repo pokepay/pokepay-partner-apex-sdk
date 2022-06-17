@@ -2,16 +2,16 @@
 
 public with sharing class OrganizationSummary extends PokepayResponseBody {
     private Integer count;
-    private Double money_amount;
+    private Decimal money_amount;
     private Integer money_count;
-    private Double point_amount;
+    private Decimal point_amount;
     private Integer point_count;
 
     public Integer getCount() {
         return this.count;
     }
 
-    public Double getMoneyAmount() {
+    public Decimal getMoneyAmount() {
         return this.money_amount;
     }
 
@@ -19,7 +19,7 @@ public with sharing class OrganizationSummary extends PokepayResponseBody {
         return this.money_count;
     }
 
-    public Double getPointAmount() {
+    public Decimal getPointAmount() {
         return this.point_amount;
     }
 

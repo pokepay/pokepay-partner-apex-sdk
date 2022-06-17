@@ -68,6 +68,31 @@ public with sharing class UpdateShop extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this, true);
+        Map<String, Object> requestMap = new Map<String, Object>();
+        if(this.name != null){
+            requestMap.put('name', this.name);
+        }
+        if(this.postal_code != null){
+            requestMap.put('postal_code', this.postal_code);
+        }
+        if(this.address != null){
+            requestMap.put('address', this.address);
+        }
+        if(this.tel != null){
+            requestMap.put('tel', this.tel);
+        }
+        if(this.email != null){
+            requestMap.put('email', this.email);
+        }
+        if(this.external_id != null){
+            requestMap.put('external_id', this.external_id);
+        }
+        if(this.private_money_ids != null){
+            requestMap.put('private_money_ids', this.private_money_ids);
+        }
+        if(this.can_topup_private_money_ids != null){
+            requestMap.put('can_topup_private_money_ids', this.can_topup_private_money_ids);
+        }
+        return JSON.serialize(requestMap, true);
     }
 }

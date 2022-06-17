@@ -4,9 +4,9 @@ public with sharing class Transfer extends PokepayResponseBody {
     private String id;
     private AccountWithoutPrivateMoneyDetail sender_account;
     private AccountWithoutPrivateMoneyDetail receiver_account;
-    private Double amount;
-    private Double money_amount;
-    private Double point_amount;
+    private Decimal amount;
+    private Decimal money_amount;
+    private Decimal point_amount;
     private String done_at;
     private String type;
     private String description;
@@ -24,15 +24,15 @@ public with sharing class Transfer extends PokepayResponseBody {
         return this.receiver_account;
     }
 
-    public Double getAmount() {
+    public Decimal getAmount() {
         return this.amount;
     }
 
-    public Double getMoneyAmount() {
+    public Decimal getMoneyAmount() {
         return this.money_amount;
     }
 
-    public Double getPointAmount() {
+    public Decimal getPointAmount() {
         return this.point_amount;
     }
 

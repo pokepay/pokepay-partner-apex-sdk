@@ -122,6 +122,58 @@ public with sharing class UpdateCampaign extends PokepayRequest {
     }
 
     public override String getRequestBody() {
-        return JSON.serialize(this, true);
+        Map<String, Object> requestMap = new Map<String, Object>();
+        if(this.name != null){
+            requestMap.put('name', this.name);
+        }
+        if(this.starts_at != null){
+            requestMap.put('starts_at', this.starts_at);
+        }
+        if(this.ends_at != null){
+            requestMap.put('ends_at', this.ends_at);
+        }
+        if(this.priority != null){
+            requestMap.put('priority', this.priority);
+        }
+        if(this.event != null){
+            requestMap.put('event', this.event);
+        }
+        if(this.description != null){
+            requestMap.put('description', this.description);
+        }
+        if(this.status != null){
+            requestMap.put('status', this.status);
+        }
+        if(this.point_expires_at != null){
+            requestMap.put('point_expires_at', this.point_expires_at);
+        }
+        if(this.point_expires_in_days != null){
+            requestMap.put('point_expires_in_days', this.point_expires_in_days);
+        }
+        if(this.is_exclusive != null){
+            requestMap.put('is_exclusive', this.is_exclusive);
+        }
+        if(this.subject != null){
+            requestMap.put('subject', this.subject);
+        }
+        if(this.amount_based_point_rules != null){
+            requestMap.put('amount_based_point_rules', this.amount_based_point_rules);
+        }
+        if(this.product_based_point_rules != null){
+            requestMap.put('product_based_point_rules', this.product_based_point_rules);
+        }
+        if(this.applicable_days_of_week != null){
+            requestMap.put('applicable_days_of_week', this.applicable_days_of_week);
+        }
+        if(this.applicable_time_ranges != null){
+            requestMap.put('applicable_time_ranges', this.applicable_time_ranges);
+        }
+        if(this.applicable_shop_ids != null){
+            requestMap.put('applicable_shop_ids', this.applicable_shop_ids);
+        }
+        if(this.minimum_number_for_combination_purchase != null){
+            requestMap.put('minimum_number_for_combination_purchase', this.minimum_number_for_combination_purchase);
+        }
+        return JSON.serialize(requestMap, true);
     }
 }
